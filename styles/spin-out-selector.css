@@ -1,0 +1,68 @@
+/*Lisa Donohoo                      */
+/* Spin-Out circular menu selector  */
+/* March 2024                       */
+/*                                  */
+
+#projects-section {
+    display: block;
+    position: relative;
+    margin: 40% 40%;
+}
+
+#project-button {
+    position: absolute;
+    display: block;
+    border: 1rem solid black;
+    border-radius: 50%;
+    width: 10rem;
+    min-height: 10rem;
+    margin: 0 auto;
+    background-color: green;
+    font-size: 1.8rem;
+    box-shadow: none;
+    animation: gentle-pulse 1800ms  infinite alternate both;
+}
+
+#project-container {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    rotate: 180deg;
+    z-index: -1;
+}
+
+#pie-shape a:hover {
+    fill: gray;
+    stroke-opacity: .5;
+}
+
+.spin-out-style {
+    animation: spin-out 800ms both;
+}
+
+/* reverse spin-out for spin-in */
+.spin-in-style {
+    animation: spin-out 600ms reverse both;
+}
+
+@keyframes gentle-pulse {
+    100% { 
+        box-shadow: 0.1rem 0.1rem 3rem orange;
+    }
+}
+
+@keyframes spin-out {
+    from {
+        scale: 1;
+        rotate: 180deg;
+    }
+    to {
+        scale: 2.5;
+        rotate: 0deg;
+    }
+}
+
+#project-button:hover {
+    background-color: greenyellow;
+    scale: 1.05;
+}
